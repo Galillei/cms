@@ -5,7 +5,8 @@
 <script src="http://code.angularjs.org/1.2.3/angular.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 <script src="app.js"></script>
-
+<script src="controllers/CustomersController.js"></script>
+<script src="directive/data.js"></script>
 <body>
 
 <h1>
