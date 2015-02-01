@@ -1,5 +1,6 @@
 angular.module('app')
-    .controller('CustomersController', ['$scope','data',function ($scope, data){
+    .controller('CustomersController', ['$scope','data',CustomersController]);
+function CustomersController($scope, data){
     data.getCustomers().success(parseCustomers);
     function parseCustomers(datas){
         $scope.customers = datas;
@@ -47,4 +48,4 @@ angular.module('app')
         }
     }
 
-}]);
+}
