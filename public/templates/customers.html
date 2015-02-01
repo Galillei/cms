@@ -1,0 +1,16 @@
+<div ng-repeat="customer in customers">
+    <div>
+
+        <button ng-click="removeCustomer(customer.id)">[-]</button>
+        <a href="#/customer/{{customer.id}}">
+            {{ customer.first_name }} {{ customer.last_name }}
+        </a>
+    </div>
+    <div>
+        {{ customer.email }}
+    </div>
+</div>
+<div>
+    <div><input ng-model="newCustomer.name" style="width: 99%"></div>
+    <div><input ng-model="newCustomer.email" style="width: 170px"><a ng-click="addCustomer()">[+]</a></div>
+</div>
