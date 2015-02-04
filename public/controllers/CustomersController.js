@@ -10,16 +10,17 @@
         }
 
         vm.newCustomer = {name: '', email: ''};
-        vm.addCustomer = function addCustomer() {
-            var names = vm.newCustomer.name.split(' ');
-            data.addCustomer({
-                first_name: names[0],
-                last_name: names[1],
-                email: $scope.newCustomer.email
-            })
-                .success(customerAddSuccess)
-                .error(customerAddError);
-        }
+        vm.addCustomer = addCustomer;
+        function addCustomer() {
+          var names = vm.newCustomer.name.split(' ');
+          data.addCustomer({
+                 first_name: names[0],
+                 last_name: names[1],
+                 email: $scope.newCustomer.email
+                })
+                 .success(customerAddSuccess)
+                 .error(customerAddError);
+            }
         vm.removeCustomer = function (id) {
             if (confirm('Do you really want to remove this customer?')) {
                 data.removeCustomer(id).success(customerRemoveSuccess);
@@ -34,14 +35,6 @@
         function customerAddError(datas) {
             vm.error = datas;
         }
-
-        vm.removeCustomer = function (id) {
-            if (confirm('Do you really want to remove this customer?')) {
-                data.removeCustomer(id).success(customerRemoveSuccess);
-            }
-        }
-
-
         function customerRemoveSuccess(datas) {
             var i = vm.customers.length;
             while (i--) {
