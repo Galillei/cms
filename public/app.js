@@ -1,8 +1,8 @@
 /**
  * Created by root on 1/30/15.
  */
-var app = angular.module('app',[ 'ngRoute' ]);
-app.config(function configure($routeProvider){
+angular.module('app',[ 'ngRoute' ])
+.config(function configure($routeProvider){
     $routeProvider
         .when('/', { controller: 'CustomersController', templateUrl: './templates/customers.html' })
         .when('/customer/:id', { controller: 'CustomerController', templateUrl: './templates/customer.html' })
