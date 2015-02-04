@@ -4,7 +4,7 @@
 angular.module('app',[ 'ngRoute' ])
 .config(function configure($routeProvider){
     $routeProvider
-        .when('/', { controller: 'CustomersController', templateUrl: './templates/customers.html' })
+        .when('/', { controller: 'CustomersController', templateUrl: './templates/customers.html', controllerAs:'vm' })
         .when('/customer/:id', { controller: 'CustomerController', templateUrl: './templates/customer.html' })
         .when('/calculator/', {controller:'CalculatarController', templateUrl:'./templates/calculator/calculate.html'})
         .otherwise({ redirect: '/' });

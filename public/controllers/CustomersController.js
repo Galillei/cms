@@ -16,7 +16,7 @@
           data.addCustomer({
                  first_name: names[0],
                  last_name: names[1],
-                 email: $scope.newCustomer.email
+                 email: vm.newCustomer.email
                 })
                  .success(customerAddSuccess)
                  .error(customerAddError);
@@ -28,7 +28,7 @@
         }
         function customerAddSuccess(datas) {
             vm.error = null;
-            vm.customers.push(datas);
+            $scope.customers.push(datas);
             vm.newCustomer = {name: '', email: ''};
         }
 
@@ -36,10 +36,10 @@
             vm.error = datas;
         }
         function customerRemoveSuccess(datas) {
-            var i = vm.customers.length;
+            var i = $scope.customers.length;
             while (i--) {
-                if (vm.customers[i].id == datas) {
-                    vm.customers.splice(i, 1);
+                if ($scope.customers[i].id == datas) {
+                    $scope.customers.splice(i, 1);
                 }
             }
         }
