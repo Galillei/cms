@@ -25,7 +25,7 @@
             if (confirm('Do you really want to remove this customer?')) {
                 data.removeCustomer(id).success(customerRemoveSuccess);
             }
-        }
+        };
         function customerAddSuccess(datas) {
             vm.error = null;
             $scope.customers.push(datas);
