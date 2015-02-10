@@ -1,17 +1,12 @@
 <div>
-<div>
-    <input type="radio" ng-model="calc.action" value="/">
+    <div class="calcs-action">
+<div ng-repeat="(key,action) in calc.actions" >
+    <div class="calculate-action">
+        <input type="radio" name='action' value="{{key}}">{{action}}
+    </div>
 </div>
-<div>
-    <input type="radio" ng-model="calc.action" value="-">
+    </div>
+<div class="calc-expession">
+    <input type="text" ng-model="calc.expession">
 </div>
-<div>
-    <input type="radio" ng-model="calc.action" value="+">
-</div>
-<div>
-    <input type="radio" ng-model="calc.action" value="*">
-</div>
-</div>
-<div>
-    <input ng-model="calc.expession">
-</div>
+    </div>

@@ -2,6 +2,7 @@
 <html ng-app="app">
 <title>Customer Management</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="<?php echo Asset::url('bast-public-less')?>">
 <script src="http://code.angularjs.org/1.2.3/angular.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 <script src="<?php echo Asset::url('singlejs-main'); ?>"></script>

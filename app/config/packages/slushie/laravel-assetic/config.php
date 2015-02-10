@@ -82,7 +82,6 @@ return array(
         'css_import',
         'css_rewrit',
         'less_php',
-        'css_min'
       ),
 
       // named assets defined below
