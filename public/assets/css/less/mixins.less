@@ -11,3 +11,39 @@
     visibility: hidden;
   }
 }
+
+.input_style {
+  border: 1px solid #cccccc; //цвет рамки
+  border-radius: 3px; //закругление углов (общее)
+  -webkit-border-radius: 3px; //закругление углов (Google Chrome)
+  -moz-border-radius: 3px; //закругление углов (FireFox)
+  -khtml-border-radius: 3px; //закругление углов (Safari)
+  background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+  outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+  height: 24px; // высота на свое усмотрение
+  width: 120px; // ширина на свое усмотрение
+  color: #cccccc; //цвет шрифта в обычном состоянии
+  font-size: 15px; // Размер шрифта
+  font-family: Tahoma; // Стиль шрифта
+}
+.input_style_focus{
+  color: #000000;
+  border: 1px solid #000000
+}
+.button_style{
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 2px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    background: #c4c9cc;
+    padding: 2px 0px 1px 4px;
+
+    text-decoration: none;
+  }
+
+.button_style_hover {
+    background: #b8b8b8;
+    text-decoration: none;
+  }

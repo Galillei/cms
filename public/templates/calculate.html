@@ -1,12 +1,14 @@
 <div>
     <div class="calcs-action">
 <div ng-repeat="(key,action) in calc.actions" >
-    <div class="calculate-action">
-        <input type="radio" name='action' value="{{key}}">{{action}}
+    <div class="calculate-action" ng-init="calc.method=1">
+        <input type="radio" name='action' ng-model="calc.method" value="{{key}}">{{action}}
     </div>
 </div>
     </div>
 <div class="calc-expession">
     <input type="text" ng-model="calc.expession">
+   <a href="#" class="btn"> = </a>
+    <input type="text" ng-model="calc.result">
 </div>
     </div>

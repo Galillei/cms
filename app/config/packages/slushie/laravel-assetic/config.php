@@ -47,6 +47,16 @@ return array(
       // must be rewritable
       'output' => 'singlejs-main.js'
     ),
+    'singlejs-angular'=>array(
+      'filters' =>array(
+
+      ),
+      'assets'=>array(
+          public_path('angular.js'),
+          public_path('angular_route.js')
+      ),
+      'output' =>'angular_with_route.js'
+    ),
 
      // Adding css to singlecss-main group
 

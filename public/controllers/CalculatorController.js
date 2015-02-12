@@ -6,6 +6,7 @@
     function CalculatorController(){
         var vm = this;
         vm.expession='12';
+        vm.method = 1;
         vm.actions = {
             1:'/',
             2:'+',
