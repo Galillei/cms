@@ -1,8 +1,8 @@
 <div>
     <div class="calcs-action">
 <div ng-repeat="(key,action) in calc.actions" >
-    <div class="calculate-action" ng-init="calc.method=1">
-        <input type="radio" name='action' ng-model="calc.method" value="{{key}}">{{action}}
+    <div class="calculate-action" ng-init="calc.method=2">
+        <input type="radio" ng-click="calc.resetExpession()" name='action' ng-model="calc.method" value="{{key}}">{{action}}
     </div>
 </div>
     </div>
